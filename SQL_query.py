@@ -10,7 +10,7 @@ select
     o.billing_email,
     p.payment_method,
     p.card_brand,
-    count(amount) as total_orders,
+    count(*) as total_orders,
     sum(
         case
             when o.amount >= 200000 then 1
