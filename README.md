@@ -1,6 +1,6 @@
 # sql-data-analysis-practice
 
-# SQL Fraud Analysis Practice
+SQL Fraud Analysis Practice
 
 This repository contains SQL practice projects using orders, users, and payments tables.
 
