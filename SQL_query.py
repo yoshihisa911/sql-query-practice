@@ -32,15 +32,16 @@ group by
     o.billing_email
 having
     sum(o.amount) > (
-                select 
-                    avg(total_amount)
-                from (
-                        select o3.billing_email,
-                            sum(o3.amount) as total_amount
-                        from 
-                            orders as o3
-                        group by 
-                            o3.billing_email) as user_totals)
+        select 
+            avg(total_amount)
+        from (
+                select
+                    o3.billing_email,
+                    sum(o3.amount) as total_amount
+                from 
+                    orders as o3
+                group by 
+                    o3.billing_email) as user_totals)
                     and
                 sum(
                     case
