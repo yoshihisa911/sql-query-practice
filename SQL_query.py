@@ -42,7 +42,7 @@ having
                     orders as o3
                 group by 
                     o3.billing_email) as user_totals)
-                    and
+                and
                 sum(
                     case
                         when o.amount >= 200000 then 1
